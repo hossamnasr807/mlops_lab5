@@ -47,7 +47,15 @@ gui = gr.Interface(
         ),
         model_dropdown
     ],
-    outputs=gr.Textbox(label="AI Assistant Response"),
+    
+    outputs=gr.Textbox(
+    label="AI Assistant Response",
+    lines=12,           
+    max_lines=20,       
+    show_copy_button=True,  
+    autoscroll=True     
+),
+
     title="Local AI Assistant (Ollama + Gradio)",
     description="A fully local AI chat assistant powered by Ollama."
 )
